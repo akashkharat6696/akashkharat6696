@@ -1,0 +1,345 @@
+string -Strings in Python can be created using single quotes or double quotes or even triple quotes.
+exa:
+my_data=("dhoni")
+print(type(my_data))
+
+my_data=("98")
+print(type(my_data))
+-------------------------------------------------------------------------------------------------------
+my_data="""india is my country
+and i love my country"""
+print(my_data)
+
+output - india is my country
+and i love my country
+
+---------------------------------------------
+my_data="india is my country
+and i love my country"
+print(my_data)
+
+output is - error
+----------------------------------------------
+my_data="""india is my country \
+and i love my country"""
+print(my_data)
+
+output - india is my country \
+and i love my country
+------------------------------------------------------
+my_data="india is my country\
+and i love my country"
+print(my_data)
+
+output - India is my country and i love my country.
+-------------------------------------------------------------
+my_data=r"india is my country\
+and i love my country"
+print(my_data)
+
+output - india is my country\
+and i love my country
+
+---------------------------------------------------------------------
+my_data= input("enter my name: ")
+print(my_data)
+print(type(my_data))
+
+output -
+enter my Name: Akash
+Akash
+<class 'str'>
+----------------------------------------------------------------------
+my_data= input("enter my number: ")
+print(my_data)
+print(type(my_data))
+
+output - enter my number: 8793558497
+8793558497
+<class 'str'>
+----------------------------------------------------------------------
+var = "dhoni"
+varl = "msd"
+print(var+varl)
+
+output - dhonimsd
+
+--------------------------------------------------------------------------
+var = "dhoni"
+varl = 90
+print(var+str(varl))
+
+output - dhoni90
+------------------------------------------------------------------------
+name = "dhoni"
+age = 33
+statement = "my captain %s play even at the age of %d" % (name,age)
+print(statement)
+
+# %s = string
+# %d = integer
+
+output 
+my captain dhoni play even at the age of 33
+------------------------------------------------------------------------------
+name = "dhoni"
+age = 33
+statement = "my captain {} play even at the age of {}".format(name, age)
+print(statement)
+
+output
+my captain dhoni play even at the age of 33
+---------------------------------------------------------------------------------
+name = "dhoni"
+age = 33
+statement = f"my captain {name} play even at the age of {age}"
+print(statement)
+
+
+output 
+my captain dhoni play even at the age of 33
+------------------------------------------------------------------------------------
+my_string = "dhoni is"
+print(my_string[4])
+
+output 
+i
+-------------------------------------------------------------------------------
+my_string = "dhoni is"
+my_string[4]="y"
+print(my_string)
+
+
+output 
+error
+-------------------------------------------------------------------------
+my_string = "dhoni is"
+output = my_string.replace("i","Y")
+print(output)
+
+output
+my_string = "dhoni is"
+output = my_string.replace("i","Y")
+print(output)
+
+------------------------------------------------------------------------------
+---------------------String Slicing-------------------------------------
+my_string = "dhoni is"
+output = my_string.replace("i","y")
+print(output)
+
+output 
+dhony ys
+-------------------------------------------------------------------------
+# my_string = "dhoni is"
+# my_string[4] = "y"
+# print(my_string)
+
+output is error
+--------------------------------------------------------------
+# my_string = "dhoni is"
+# print(my_string[4])
+
+output is 
+i
+---------------------------------------------------------------
+
+to find length of a function
+
+my_data = "dhoni csk"
+print(len(my_data))_____________len=length
+
+output 
+9
+
+---------------------------------------------------------------------------------
+To know the functions of the library
+
+my_data = "dhoni"
+print(dir(my_data))
+
+output will show all the data types of the function.
+
+-------------------------------------------------------------------------------------
+To count any no of letters in the sentence
+
+my_data = "india is rich history"
+output = my_data.count("i")
+print(output)
+
+output is 5
+
+-----------------------------------------------------------------
+we can also mention from which no we want to count letters
+
+
+my_data = "india is rich history"
+output = my_data.count("i",3)
+print(output)
+
+output will be
+4
+-------------------------------------------------------------------------------------
+we also give limit from where to where we find given letter
+
+my_data = "india is rich history"
+output = my_data.count("i",3,4)
+print(output)
+
+
+output will be
+1
+---------------------------------------------------------------------------------------
+
+var = "india is rich history"
+output = var.find("i")
+print(output)
+output is - 0
+
+var = "india is rich history"
+output = var.index("i")
+print(output)
+output is - 0
+
+
+var = "india is rich history"
+output = var.rfind("i")
+print(output)
+output is - 15
+
+var = "india is rich history"
+output = var.rfind("i")
+print(output)
+output is - 15
+
+var = "india is rich history"
+output = var.rfind("z")
+print(output)
+print("welcome to find")
+output is - -1
+            welcome to find
+
+
+var = "india is rich history"
+output = var.rindex("z")
+print(output)
+print("welcome to index")
+output is - ERROR
+---------------------------------------------------------------------------------------------------
+conver string to list
+
+var = "india is rich history"
+output = list(var)
+print(output)
+print(type(output))
+
+output - 
+['i', 'n', 'd', 'i', 'a', ' ', 'i', 's', ' ', 'r', 'i', 'c', 'h', ' ', 'h', 'i', 's', 't', 'o', 'r', 'y']
+<class 'list'>
+
+
+var = "india is rich history"
+output = var.split()
+print(output)
+print(type(output))
+
+output 
+['india', 'is', 'rich', 'history']
+<class 'list'>
+
+
+#we can also split by word or letter 
+var = "india is rich history"
+output = var.split("i")
+print(output)
+print(type(output))
+
+['', 'nd', 'a ', 's r', 'ch h', 'story']
+<class 'list'>
+
+
+
+#we can also split the function by using index number.
+var = "india is rich history"
+output = var.split("i", 2)
+print(output)
+print(type(output))
+
+['', 'nd', 'a is rich history']
+<class 'list'>
+
+
+#we can also specified the function from where to split i.e. from right or from left.
+
+var = "india is rich history"
+output = var.rsplit("i", 2)
+print(output)
+print(type(output))
+
+output will be-
+['india is r', 'ch h', 'story']
+<class 'list'>
+-------------------------------------------------------------------------------------------------------------------------------------
+Global and Local Variables
+
+x = "awesome"         #global variable
+
+def myfunc(): 
+  x="good"            #local variable
+  print("Python is " + x)
+  
+
+myfunc()
+print("Python is " + x)
+
+Python is good
+Python is awesome
+
+Another example....
+
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+Python is fantastic
+Python is awesome
+
+---------------------------------------------------------------------------------------------------------------------------------
+We can also able to declare the global var. inside the function by only using a "global" keyword
+
+Example
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+
+
+
+we can also change the defined global variable by using "global" keyword inside the function.
+
+Example
+
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+--------------------------------------------------------------------------------------------------------------------------
+
+https://www.w3schools.com/python/python_numbers.asp
