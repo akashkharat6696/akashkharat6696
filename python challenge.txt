@@ -1,0 +1,340 @@
+
+
+
+-----------------------------------------------------------------------------------------------
+var = {"name":"dhoni","age":33,"team":"india","country":"australia"}
+print("the original list: "+ str(var))
+max_len = -1
+for ele in var:
+    if len(ele) > max_len:
+        max_len = len(ele)
+        res = ele
+        print("max length stiring is: " + res)
+
+
+
+
+
+def Mars_function():
+    print("hello")
+    print("welcome to hdfc")
+
+-------------------------------------
+def Mars_function(name):
+
+    print("Hello","name")
+    print("welcome to hdfc")
+
+Mars_function("dhoni")
+Mars_function(89)
+---------------------------------------
+def Mars_function(name):
+    if isinstance(name,str):
+       print("Hello","name")
+       print("welcome to hdfc")
+
+Mars_function("dhoni")
+Mars_function(89)
+-------------------------------------------------
+def Mars_function(name,country):
+    if isinstance(name,str)
+        if isinstance(country,str):
+       print("Hello",name,"from",country)
+       print("welcome to hdfc")
+
+Mars_function("dhoni","kohli")
+Mars_function(89)
+-------------------------------------------------
+def Mars_function(name,country):
+    if isinstance(name,str):
+       print("Hello",name,"from",country)
+       print("welcome to hdfc")
+
+Mars_function("dhoni","kohli")
+Mars_function(89)
+-------------------------------------------------
+def Mars_function(name,country):
+    if isinstance(name,str) and isinstance(name,str):
+       print("Hello",name,"from",country)
+       print("welcome to hdfc")
+
+Mars_function(country = "dhoni",name = "kohli")
+-------------------------------------------------------
+def server_login(ip,pwd="admin"):
+    server_login("3.3.3.3")
+def server_login(ip="4.4.4.4",pwd="admin"):
+    print(ip)
+    print(pwd)
+------------------------------------------------------------
+def server_login(ip,pwd="admin"):
+    server_login("3.3.3.3")
+def server_login(ip="4.4.4.4",pwd="admin"):
+    print(ip)
+    print(pwd)
+server_login("2.2.2.2","admin@123")
+server_login("2.2.2.2","admin@123")
+------------------------------------------------------------------
+def student_passed(names):
+    print(names)
+student_passed("dhoni")
+--------------------------------------------------------
+def student_passed(*names):       #*args
+    print(names)
+    print(type(names))
+student_passed("dhoni","kohli")
+---------------------------------------------
+def student_passed(**names):     ##**kwargs
+    print(names)
+    print(type(names))
+student_passed(name="dhoni",country="kohli")
+----------------------------------------------------
+def student_CGPA(eng,math,s_name):
+    total = eng+math
+    return total
+returned_output = student_cgpa(33,54,"dhoni")
+print(returned_output)
+if returned output > 100:
+    print("first class")      error
+--------------------------------------------------------------
+def student_CGPA(eng,math,s_name):
+    total = eng+math
+    return total,s_name
+returned_output = student_CGPA(33,54,"dhoni")
+print(returned_output)
+if returned output[0] > 100:
+    print("first class")      error
+-----------------------------------------------------------
+def student_CGPA(eng,math,s_name):
+    total = eng+math
+    return total,s_name
+returned_total, returned_name = student_CGPA(33,54,"dhoni")
+print(returned_output)
+if returned total > 100:
+    print("first class")      error
+---------------------------------------------------------------
+function of scoping
+
+var = 100
+def fun():
+    print(var)
+-----------------------------------------------
+var = 100
+def fun():
+    print(var)
+print(var)
+fun()
+print(var)
+-----------------------------------------
+var = 100
+def fun():
+    var = 10
+    print(var)
+print(var)
+fun()
+print(var)
+------------------------------------
+var = 100
+def fun():
+    global var
+    var = 10
+    print(var)
+print(var)
+fun()
+print(var)
+---------------------------------------------
+Scoping will happen like Local func. enclosed fun, global fun.
+
+var = 1000
+def fun():
+    var = 100
+    def new():
+        var=10
+        print(var)
+    new()
+fun()
+-------------------------------------------------------------------------------------
+var = 1000
+def fun():
+    var = 100
+    def new():
+        #var=10
+        print(var)
+    new()
+fun()
+-----------------------------------------------------------------------
+var = 1000
+def fun():
+    #var = 100
+    def new():
+        #var=10
+        print(var)
+    new()
+fun()
+-----------------------------------------------------------------------------
+def fun():
+
+    print("hello")
+
+    fun()
+
+fun()
+-------------------------------------------------------------------------------
+lambda function
+
+
+def double(x):
+
+    return x*x
+
+output = double(2)
+print(output)
+------------------------------------------------
+double = lambda x : x*x
+print(double(2))
+---------------------------------------------
+var = [2,4,6,8]
+
+def double(x):
+    return x*x
+output = list(map(double, var))
+print(output)
+----------------------------------------------------------------------
+
+
+--------------Class---------------------
+var = "dhoni"
+def fun()
+    print("welcome")
+
+output
+welcome
+
+
+class ML_class:
+
+    var = "dhoni"
+
+    def fun(self)
+        print("welcome")
+
+my = ML_Class()
+    my.fun()
+    print(my.var)
+
+output
+dhonY Ys
+---------------------------------------------------------------------------
+class ML_server:
+
+    def Login(ip,pwd):
+        print(ip,pwd)
+
+    def HostName(ip):
+
+        print(ip)
+
+
+class ML_server:
+
+    def __init__(self,ip,pwd):
+        self.ip = ip
+        self.pwd = pwd
+
+    def Login(self):
+        print(self.ip,self.pwd)
+
+    def HostName(selfself):
+        print(self.ip)
+
+my_ml = ML_server()
+-------------------------------------------------------------------------------------
+
+
+class ML_server:
+
+    def __init__(akash,ip,pwd):
+        self.ip = ip
+        self.pwd = pwd
+
+    def Login(akash):
+        print(akash.ip,akash.pwd)
+
+    def HostName(akash):
+        print(akash.ip)
+
+my_ml = ML_server("2.2.2.2","123")
+my_ml.login()
+my_ml.hostname()
+print(my.ml.__doc__)
+
+-------------------------------------------------------------
+class ML_server:
+    def __init__(self, ip, pwd):
+        self.ip = ip
+        self.pwd = pwd
+        
+    @staticmethod
+    def Login(country):
+        print(country)
+
+    def Hostname(self):
+        print(self.ip)
+
+my_ml = ML_server("2.2.2.2","123")
+my_ml.login("india")
+my_Ml.hostname()
+---------------------------------------------------------------
+class ML_server:
+     def __init__(self,ip,pwd):
+
+         self.ip = ip
+         self.pwd = pwd
+
+     def Login(self):
+         print(self.ip,"two")
+
+     def Login(self,country):
+         print(self.pwd,"one")
+
+my_ml = ML_server("2.2.2.2","123")
+my_ml.login("india")
+
+---------------------------------------------------------------------
+
+class ML_server:
+
+     def __init__(self,ip,pwd):
+
+         self.ip = ip
+         self.pwd = pwd
+
+     def __Login(self):
+         print(self.ip,"two")
+
+     def Login(self,country):
+         print(self.pwd,"one")
+
+my_ml = ML_server("2.2.2.2","123")
+my_ml.login()
+my_ml.hostname("india")
+----------------------------------------------------------------------
+
+class ML_server:
+
+    def __init__(self, ip, pwd):
+        self.ip = ip
+        self.pwd = pwd
+
+    def hostName(self,country):
+        print(self.pwd, "one")
+
+class second(ML_server):
+    def login(self):
+        print(self.pwd)
+
+
+my_ml = second("2.2.2.2", "123")
+my_ml.login()
+my_ml.hostname("india")
+-----------------------------------------------------------------------------
+
